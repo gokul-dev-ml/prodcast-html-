@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link
+  rel="stylesheet"
+  href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+  integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+  crossorigin="anonymous"
+>
+
+<!-- jQuery (must come first) -->
+<script
+  src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+  crossorigin="anonymous">
+</script>
+
+<!-- Popper.js -->
+<script
+  src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+  integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+  crossorigin="anonymous">
+</script>
+
+<!-- Bootstrap JS -->
+<script
+  src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+  integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+  crossorigin="anonymous">
+</script>
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap");
+
+    .frontimage{
+        width: 200px;
+        height: 180px;
+        margin-top: 30px;
+        margin-left: 50px;
+        margin-bottom: 10px;
+        margin-right: auto;
+    }
+    .frontpage-heading{
+        font-family: "roboto";
+        font-size: 15px;
+        font-weight: bold;
+        color: #151765;
+        text-align: center;
+    }
+    .frontpage-episodes{
+        font-family: "roboto";
+        font-size: 10px;
+        color: #5a7184;
+        text-align: center;
+        font-weight: lighter;
+    }
+    .top-backgroundimage {
+    background-image: url("https://d2clawv67efefq.cloudfront.net/ccbp-static-website/podcasts-bg.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 400px;
+}
+.next-page {
+    display: none;
+}
+.next-container-page{
+    background-color:#151765 ;
+    width: 100%;
+}
+.next-container-page-heading{
+    font-family: "roboto";
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.next-container-page-image{
+    width: 120px;
+    height: 70px;
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+
+}
+.next-container-page-prodcast-image{
+    width: 160px;
+    height: 100px;
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+
+}
+.next-container-page-top-card-content{
+    margin-left: 4px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: 10px solid #151765;
+    
+}
+.next-container-page-paragraph{
+    font-family: "roboto";
+    font-size: 20px;
+    font-weight: thin;
+    color: #ffffff;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.next-container-bottom-heading{
+    margin: 0 0 6px;
+  font-size: 18px;
+  font-weight: 800;   /* Correct: slightly bold, not heavy */
+  color: #1f2a5a;
+}
+.next-container-bottom-paragraph{
+    margin: 0 0 8px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #6b7280; 
+}
+.next-container-bottom-time{
+    font-size: 12px;
+    color: #6b7280;
+}
+.d-flex{
+    display: flex;
+}
+.next-container-bottom-secondcard{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    margin-left: 10px;
+    padding-top:30px ;
+}
+
+    
+  </style>
+</head>
+
+<body>
+    <div id="mainPage">
+        <div class="top-backgroundimage ">
+            
+        </div>
+        <div class="d-flex flex-row justify-content-center align-items-center">
+            <div onclick="display('secondpage1')">
+                <img src="https://d2clawv67efefq.cloudfront.net/ccbp-static-website/puri-jagannadh-img.png" class="frontimage"/>
+                <h1 class="frontpage-heading">Purj Jagannadh</h1>
+                <p class="frontpage-episodes">24 Episodes</p>
+
+            </div>
+            <div onclick="display('secondpage2')">
+                <img src="https://d2clawv67efefq.cloudfront.net/ccbp-static-website/tedx-img.png" class="frontimage"/>
+                <h1 class="frontpage-heading">TEDx Talks</h1>
+                <p class="frontpage-episodes">2544 Episodes</p>
+
+            </div>
+        </div>
+        <div class="d-flex flex-row justify-content-center align-items-center">
+             <div onclick="display('secondpage3')">
+                <img src="https://d2clawv67efefq.cloudfront.net/ccbp-static-website/sadhguru-img.png" class="frontimage"/>
+                <h1 class="frontpage-heading">Sadhguru</h1>
+                <p class="frontpage-episodes">49 Episodes</p>
+
+            </div>
+              <div onclick="display('secondpage4' )">
+                <img src="https://d2clawv67efefq.cloudfront.net/ccbp-static-website/on-purpose-img.png" class="frontimage"/>
+                <h1 class="frontpage-heading">on purpose</h1>
+                <p class="frontpage-episodes">49 Episodes</p>
+
+            </div>
+        </div>
+    </div>
+<div class="next-page" id="secondpage1">
+
+    <!-- TOP HEADER SECTION -->
+    <div class="d-flex flex-row justify-content-center next-container-page">
+        <div>
+            <img
+                src="https://d2clawv67efefq.cloudfront.net/ccbp-static-website/puri-jagannadh-img.png"
+                class="next-container-page-prodcast-image"
+            />
+        </div>
+        <div class="next-container-page-top-card-content">
+            <p class="next-container-page-paragraph">Prodcast</p>
+            <h1 class="next-container-page-heading">
+                Purj Jagannadh prodcast
+            </h1>
+            <p class="next-container-page-paragraph">
+                The puri Jagannadh Prodcast
+            </p>
+        </div>
+    </div>
+
+    <!-- LIST SECTION -->
+    <div>
+
+        <!-- ITEM 1 -->
+         <a href="https://www.youtube.com/watch?v=L6t_muBDQiQ" target="_blank" style="text-decoration: none; color: inherit;">
+        <div class="d-flex flex-row align-items-start list-row">
+            <div>
+                <img
+                    src="https://d2clawv67efefq.cloudfront.net/ccbp-static-website/puri-jagannadh-img.png"
+                    class="next-container-page-image"
+                />
+            </div>
+            <div class="next-container-bottom-secondcard">
+                <h2 class="next-container-bottom-heading">
+                    Molecular Gastronomy
+                </h2>
+                <p class="next-container-bottom-paragraph">
+                    anything happens there it <br />will not cook...
+                </p>
+                <p class="next-container-bottom-time">15 min</p>
+            </div>
+        </div>
+        </a>
+
+        <!-- ITEM 2 -->
+         <a href="https://www.youtube.com/watch?v=tOHTQ7WHcN8" target="_blank" style="text-decoration: none; color: inherit;">
+        <div class="d-flex flex-row align-items-start list-row">
+            <div>
+                <img
+                    src="https://d2clawv67efefq.cloudfront.net/ccbp-static-website/puri-jagannadh-img.png"
+                    class="next-container-page-image"
+                />
+            </div>
+            <div class="next-container-bottom-secondcard">
+                <h2 class="next-container-bottom-heading">
+                    Mysteriuos book
+                </h2>
+                <p class="next-container-bottom-paragraph">
+                    The Voynich manusrict is <br />the 15th century book..
+                </p>
+                <p class="next-container-bottom-time">12 min</p>
+            </div>
+        </div>
+        </a>
+
+        <!-- ITEM 3 -->
+         <a href="https://www.youtube.com/watch?v=LLkJDiXdVnM" target="_blank" style="text-decoration: none; color: inherit;">
+        <div class="d-flex flex-row align-items-start list-row">
+            <div>
+                <img
+                    src="https://d2clawv67efefq.cloudfront.net/ccbp-static-website/puri-jagannadh-img.png"
+                    class="next-container-page-image"
+                />
+            </div>
+            <div class="next-container-bottom-secondcard">
+                <h2 class="next-container-bottom-heading">
+                    Predator Drone
+                </h2>
+                <p class="next-container-bottom-paragraph">
+                    The most power full drone.<br /> it is 10 feet height...
+                </p>
+                <p class="next-container-bottom-time">10 min</p>
+            </div>
+        </div>
+        </a>
+
+        <!-- ITEM 4 -->
+         <a href="https://www.youtube.com/watch?v=TVYo3E7Agq8" target="_blank" style="text-decoration: none; color: inherit;">
+        <div class="d-flex flex-row align-items-start list-row">
+            <div>
+                <img
+                    src="https://d2clawv67efefq.cloudfront.net/ccbp-static-website/puri-jagannadh-img.png"
+                    class="next-container-page-image"
+                />
+            </div>
+            <div class="next-container-bottom-secondcard">
+                <h2 class="next-container-bottom-heading">
+                    Paella
+                </h2>
+                <p class="next-container-bottom-paragraph">
+                    The nation dish of spain... <br />it is a rice dish...
+                </p>
+                <p class="next-container-bottom-time">15 min</p>
+            </div>
+        </div>
+        </a>
+
+        <!-- BACK BUTTON -->
+        <div class="d-flex justify-content-end pr-3 pb-3">
+            <button class="btn btn-primary" onclick="display('mainPage')">
+                Back
+            </button>
+        </div>
+
+    </div>
+
+</div>
+
+    <div class="next-page" id="secondpage2">
+
+    <!-- TOP HEADER SECTION -->
+    <div class="d-flex flex-row justify-content-center next-container-page">
+        <div>
+            <img
+                src="https://d2clawv67efefq.cloudfront.net/ccbp-static-website/tedx-img.png"
+                class="next-container-page-prodcast-image"
+            />
+        </div>
+        <div class="next-container-page-top-card-content">
+            <p class="next-container-page-paragraph">Prodcast</p>
+            <h1 class="next-container-page-heading">
+                The Tedx prodcast
+            </h1>
+            <p class="next-container-page-paragraph">
+                The Tedx Prodcast
+            </p>
+        </div>
+    </div>
+
+    <!-- LIST SECTION -->
+    <div>
+
+        <!-- ITEM 1 -->
+         <a href="https://www.youtube.com/watch?v=9Ed8OeZcOBI" target="_blank" style="text-decoration: none; color: inherit;">
+        <div class="d-flex flex-row align-items-center list-row">
+
+
+            <div>
+                <img
+                    src="https://d2clawv67efefq.cloudfront.net/ccbp-static-website/tedx-img.png"
+                    class="next-container-page-image"
+                />
+            </div>
+            <div class="next-container-bottom-secondcard">
+                <h2 class="next-container-bottom-heading">
+                    The science of friction 
+                </h2>
+                <p class="next-container-bottom-paragraph">
+                    Tribology:It's a funny <br /> sounding word you might...
+                </p>
+                <p class="next-container-bottom-time">12 min</p>
+            </div>
+        </div>
+        </a>
+
+        <!-- ITEM 2 -->
+         <a href="https://www.youtube.com/watch?v=FVGBEYiVxhA" target="_blank" style="text-decoration: none; color: inherit;">
+        <div class="d-flex flex-row align-items-start list-row">
+
+
+            <div>
+                <img
+                    src="https://d2clawv67efefq.cloudfront.net/ccbp-static-website/tedx-img.png"
+                    class="next-container-page-image"
+                />
+            </div>
+            <div class="next-container-bottom-secondcard">
+                <h2 class="next-container-bottom-heading">
+                    Unleash you
+                </h2>
+                <p class="next-container-bottom-paragraph">
+                    What can we learn from the <br />world's enduringly...
+                </p>
+                <p class="next-container-bottom-time">8 min</p>
+            </div>
+        </div>
+        </a>
+
+        <!-- ITEM 3 -->
+         <a href="https://www.youtube.com/watch?v=DOisAG9yoNk" target="_blank" style="text-decoration: none; color: inherit;">
+        <div class="d-flex flex-row align-items-start list-row">
+
+
+            <div>
+                <img
+                    src="https://d2clawv67efefq.cloudfront.net/ccbp-static-website/tedx-img.png"
+                    class="next-container-page-image"
+                />
+            </div>
+            <div class="next-container-bottom-secondcard">
+                <h2 class="next-container-bottom-heading">
+                    3 psychological tricks
+                </h2>
+                <p class="next-container-bottom-paragraph">
+                    We all want to save more <br />money - but overall...
+                </p>
+                <p class="next-container-bottom-time">10 min</p>
+            </div>
+        </div>
+        </a>
+
+        <!-- ITEM 4 -->
+         <a href="https://www.youtube.com/watch?v=KVVW5eGiETI" target="_blank" style="text-decoration: none; color: inherit;">
+        <div class="d-flex flex-row align-items-start list-row">
+
+
+            <div>
+                <img
+                    src="https://d2clawv67efefq.cloudfront.net/ccbp-static-website/tedx-img.png"
+                    class="next-container-page-image"
+                />
+            </div>
+            <div class="next-container-bottom-secondcard">
+                <h2 class="next-container-bottom-heading">
+                    The case for stubborn
+                </h2>
+                <p class="next-container-bottom-paragraph">
+                    This decides is a moment of<br /> choice unlike any we...
+                </p>
+                <p class="next-container-bottom-time">12 min</p>
+            </div>
+        </div>
+        </a>
+
+        <!-- BACK BUTTON -->
+        <div class="d-flex justify-content-end pr-3 pb-3">
+            <button class="btn btn-primary" onclick="display('mainPage')">
+                Back
+            </button>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="next-page" id="secondpage3">
+
+    <!-- TOP HEADER SECTION -->
+    <div class="d-flex flex-row justify-content-center next-container-page">
+        <div>
+            <img
+                src="https://d2clawv67efefq.cloudfront.net/ccbp-static-website/sadhguru-img.png"
+                class="next-container-page-prodcast-image"
+            />
+        </div>
+        <div class="next-container-page-top-card-content">
+            <p class="next-container-page-paragraph">Prodcast</p>
+            <h1 class="next-container-page-heading">
+                The Sadhguru prodcast
+            </h1>
+            <p class="next-container-page-paragraph">
+                The Sadhguru prodcast
+            </p>
+        </div>
+    </div>
+
+    <!-- LIST SECTION -->
+    <div>
+
+        <!-- ITEM 1 -->
+         <a href="https://www.youtube.com/watch?v=o3C7pz8E_9c" target="_blank" style="text-decoration: none; color: inherit;">
+        <div class="d-flex flex-row align-items-start list-row">
+            <div>
+                <img
+                    src="https://d2clawv67efefq.cloudfront.net/ccbp-static-website/sadhguru-img.png"
+                    class="next-container-page-image"
+                />
+            </div>
+            <div class="next-container-bottom-secondcard">
+                <h2 class="next-container-bottom-heading">
+                    Head or Health
+                </h2>
+                <p class="next-container-bottom-paragraph">
+                    Sadhguru shares his <br /> wisdom on how to make...
+                </p>
+                <p class="next-container-bottom-time">16 min</p>
+            </div>
+        </div>
+        </a>
+
+        <!-- ITEM 2 -->
+         <a href="https://www.youtube.com/watch?v=_UTtwuF2Huo" target="_blank" style="text-decoration: none; color: inherit;">
+        <div class="d-flex flex-row align-items-start list-row">
+            <div>
+                <img
+                    src="https://d2clawv67efefq.cloudfront.net/ccbp-static-website/sadhguru-img.png"
+                    class="next-container-page-image"
+                />
+            </div>
+            <div class="next-container-bottom-secondcard">
+                <h2 class="next-container-bottom-heading">
+                    How to equip yourself
+                </h2>
+                <p class="next-container-bottom-paragraph">
+                    Society and human <br /> interaction are changing...
+                </p>
+                <p class="next-container-bottom-time">13 min</p>
+            </div>
+        </div>
+        </a>
+
+        <!-- ITEM 3 -->
+         <a href="https://www.youtube.com/watch?v=xzICoT6EguE" target="_blank" style="text-decoration: none; color: inherit;">
+        <div class="d-flex flex-row align-items-start list-row">
+            <div>
+                <img
+                    src="https://d2clawv67efefq.cloudfront.net/ccbp-static-website/sadhguru-img.png"
+                    class="next-container-page-image"
+                />
+            </div>
+            <div class="next-container-bottom-secondcard">
+                <h2 class="next-container-bottom-heading">
+                    How not to get irritated 
+                </h2>
+                <p class="next-container-bottom-paragraph">
+                    How do you seen an <br /> unpleasent spause the...
+                </p>
+                <p class="next-container-bottom-time">15 min</p>
+            </div>
+        </div>
+        </a>
+
+        <!-- ITEM 4 -->
+         <a href="https://www.youtube.com/watch?v=PsKEgrx0Xwc" target="_blank" style="text-decoration: none; color: inherit;">
+        <div class="d-flex flex-row align-items-start list-row">
+            <div>
+                <img
+                    src="https://d2clawv67efefq.cloudfront.net/ccbp-static-website/sadhguru-img.png"
+                    class="next-container-page-image"
+                />
+            </div>
+            <div class="next-container-bottom-secondcard">
+                <h2 class="next-container-bottom-heading">
+                    Isha Kriya
+                </h2>
+                <p class="next-container-bottom-paragraph">
+                    Rooted in the timeless<br/> wisdom if the yogic...
+                </p>
+                <p class="next-container-bottom-time">16 min</p>
+            </div>
+        </div>
+        </a>
+
+        <!-- BACK BUTTON -->
+        <div class="d-flex justify-content-end pr-3 pb-3">
+            <button class="btn btn-primary" onclick="display('mainPage')">
+                Back
+            </button>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="next-page" id="secondpage4">
+
+    <!-- TOP HEADER SECTION -->
+    <div class="d-flex flex-row justify-content-center next-container-page">
+        <div>
+            <img
+                src="https://d2clawv67efefq.cloudfront.net/ccbp-static-website/on-purpose-img.png"
+                class="next-container-page-prodcast-image"
+            />
+        </div>
+        <div class="next-container-page-top-card-content">
+            <p class="next-container-page-paragraph">Prodcast</p>
+            <h1 class="next-container-page-heading">
+                On purpose with jay
+            </h1>
+            <p class="next-container-page-paragraph">
+                The jay shetty  Prodcast
+            </p>
+        </div>
+    </div>
+
+    <!-- LIST SECTION -->
+    <div>
+
+        <!-- ITEM 1 -->
+        <div class="d-flex flex-row justify-content-center allign-item-center  list-row">
+            <div>
+                <img
+                    src="https://d2clawv67efefq.cloudfront.net/ccbp-static-website/on-purpose-img.png"
+                    class="next-container-page-image"
+                />
+            </div>
+            <div class="next-container-bottom-secondcard">
+                <h2 class="next-container-bottom-heading">
+                    Patrick Bet-David
+                </h2>
+                <p class="next-container-bottom-paragraph">
+                    Are you an entrepreneur or <br /> have dreams of mental 
+                </p>
+                <p class="next-container-bottom-time">15 min</p>
+            </div>
+        </div>
+
+
+        <!-- ITEM 2 -->
+        <div class="d-flex flex-row align-items-start list-row">
+            <div>
+                <img
+                    src="https://d2clawv67efefq.cloudfront.net/ccbp-static-website/on-purpose-img.png"
+                    class="next-container-page-image"
+                />
+            </div>
+            <div class="next-container-bottom-secondcard">
+                <h2 class="next-container-bottom-heading">
+                    Molecular Gastronomy
+                </h2>
+                <p class="next-container-bottom-paragraph">
+                    anything happens there it will not cook...
+                </p>
+                <p class="next-container-bottom-time">15 min</p>
+            </div>
+        </div>
+
+        <!-- ITEM 3 -->
+        <div class="d-flex flex-row align-items-start list-row">
+            <div>
+                <img
+                    src="https://d2clawv67efefq.cloudfront.net/ccbp-static-website/on-purpose-img.png"
+                    class="next-container-page-image"
+                />
+            </div>
+            <div class="next-container-bottom-secondcard">
+                <h2 class="next-container-bottom-heading">
+                    Molecular Gastronomy
+                </h2>
+                <p class="next-container-bottom-paragraph">
+                    anything happens there it will not cook...
+                </p>
+                <p class="next-container-bottom-time">15 min</p>
+            </div>
+        </div>
+
+        <!-- ITEM 4 -->
+        <div class="d-flex flex-row align-items-start list-row">
+            <div>
+                <img
+                    src="https://d2clawv67efefq.cloudfront.net/ccbp-static-website/on-purpose-img.png"
+                    class="next-container-page-image"
+                />
+            </div>
+            <div class="next-container-bottom-secondcard">
+                <h2 class="next-container-bottom-heading">
+                    Molecular Gastronomy
+                </h2>
+                <p class="next-container-bottom-paragraph">
+                    anything happens there it will not cook...
+                </p>
+                <p class="next-container-bottom-time">15 min</p>
+            </div>
+        </div>
+
+        <!-- BACK BUTTON -->
+        <div class="d-flex justify-content-end pr-3 pb-3">
+            <button class="btn btn-primary" onclick="display('mainPage')">
+                Back
+            </button>
+        </div>
+
+    </div>
+
+</div>
+
+
+    <script>
+        function display(pageId) {
+            // Hide main page and any other pages with the 'next-page' class
+            const mainPage = document.getElementById('mainPage');
+            if (mainPage) mainPage.style.display = 'none';
+
+            document.querySelectorAll('.next-page').forEach(p => p.style.display = 'none');
+
+            // Show the requested page (could be 'mainPage' or a next-page id)
+            const target = document.getElementById(pageId);
+            if (target) target.style.display = 'block';
+        }
+    </script>
+  </body>
+
+</html>
